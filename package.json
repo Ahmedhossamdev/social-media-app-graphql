@@ -1,0 +1,23 @@
+{
+  "name": "socail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.7.5",
+    "apollo-server": "^3.12.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.7.1",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.4",
+    "supervisor": "^0.12.0"
+  }
+}
