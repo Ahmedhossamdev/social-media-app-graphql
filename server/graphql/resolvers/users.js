@@ -18,7 +18,16 @@ function generateToken(user) {
 
 module.exports = {
 
-
+    Query:{
+        async getUsers (){
+            try {
+                return await User.find();
+            }
+            catch (err){
+                console.log(err);
+            }
+        }
+    },
     Mutation: {
         async login(_, {username, password}) {
             const {errors, valid} = validateLoginInput(username, password);
