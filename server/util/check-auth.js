@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (context) => {
     // context = { ... headers }
-    console.log(context.req.headers.authorization);
-    console.log("========================")
+    // console.log(context.req.headers.authorization);
+    // console.log("========================")
     const token = context.req.headers.authorization;
     if (token) {
         // Bearer ....

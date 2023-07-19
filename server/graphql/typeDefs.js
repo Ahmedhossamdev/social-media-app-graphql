@@ -4,12 +4,26 @@ const gql = require('graphql-tag');
 
 //   getUsers: [User] array of type user
 module.exports = gql`
+    type Comment{
+        id :ID!
+        createdAt :String!
+        username :String!
+        body :String!
+    }
+    type Like{
+        id :ID!
+        createdAt: String!
+        username :String!
+    }
     type Post{
         id: ID!
         body: String!
         createdAt: String!
         username: String!
+        comments:[Comment]!
+        likes:[Like]!
     }
+  
     type Query{
         getPosts: [Post]
         getPost(postId: ID!):Post
@@ -33,6 +47,9 @@ module.exports = gql`
         login(username: String! , password: String!): User!
         createPost(body: String!): Post!
         deletePost(postId: ID!): String!
+        createComment(postId: String! , body: String!): Post!
+        deleteComment(postId: String! , commentId: ID!): Post!
+        likePost(postId: ID!): Post!
     }
 
 `;
