@@ -23,6 +23,8 @@ module.exports = gql`
         comments:[Comment]!
         likes:[Like]!
         newPost: Post
+        likeCount:Int!
+        commentCount:Int!
     }
     
     type Query{

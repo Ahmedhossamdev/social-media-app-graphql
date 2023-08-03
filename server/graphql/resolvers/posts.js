@@ -2,7 +2,6 @@ const Post = require("../../models/Post");
 const checkAuth = require("./../../util/check-auth");
 const { AuthenticationError, UserInputError} = require('apollo-server');
 const {PubSub} = require('graphql-subscriptions');
-
 const pubsub = new PubSub();
 
 module.exports = {
